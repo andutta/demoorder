@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,7 +27,7 @@ public class OrderController {
 
     private static final Logger LOGGER  = LoggerFactory.getLogger(OrderController.class);
 
-    @GetMapping(path="generateOrderId", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path="generateOrderId", produces = MediaType.APPLICATION_JSON_VALUE)
     public Map<String, String> generateOrderId()
     {
         String methodName = "OrderController.generateOrderId";
